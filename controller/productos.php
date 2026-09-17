@@ -1,11 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>hola</h1>
-</body>
-</html>
+
+    <?php
+        require_once(../config/conexion.php);
+        require_once(../config/Productos.php);
+
+        $producto = new Productos();
+
+        switch($_GET["op"]){
+            case "listar":
+                $datos = $producto->get_producto();
+                $data = Array();
+
+                foreach($datos as $row){
+                    $sub_array = array();
+                    $sub_array[] = $row["prod_nom"];
+                    $sub_array[] = $row["prod_id"];
+                    $sub_array[] = $row["prod_id"];
+                    $data[] = $sub_array;
+                }
+
+                $results = array(
+                    "sEcho" => 1,
+                    "iTotalRecords" => count($data),
+                    "iTotalDisplayRecords" => count($data),
+                    "aaData" => $data
+                )
+
+                $results = array(
+                    "sEcho" => 1,
+                    "iTotalRecords" => count($data),
+                    "iTotalDisplayRecords" => count($data),
+                    "aaData" => $data
+                )
+                echo json_encode($results);
+            break;
+        }
+    ?>
