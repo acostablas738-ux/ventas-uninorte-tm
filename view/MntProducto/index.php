@@ -35,6 +35,7 @@
     <link href="../../public/lib/Ionicons/css/ionicons.css" rel="stylesheet">
     <link href="../../public/lib/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet">
     <link href="../../public/lib/jquery-switchbutton/jquery.switchButton.css" rel="stylesheet">
+    <link href="../../public/lib/datatables/jquery.dataTables.css" rel="stylesheet">
 
     <!-- Bracket CSS -->
     <link rel="stylesheet" href="../../public/css/bracket.css">
@@ -695,7 +696,7 @@
           <h6 class="tx-gray-800 tx-uppercase tx-bold tx-14 mg-b-10">Basic Responsive DataTable</h6>
 
           <div class="table-wrapper">
-            <table id="datatable1" class="table display responsive nowrap">
+            <table id="producto_data" class="table display responsive nowrap">
               <thead>
                 <tr>
                   <th class="wd-15p">Nombre Producto</th>
@@ -730,9 +731,18 @@
     <script src="../../public/lib/perfect-scrollbar/js/perfect-scrollbar.jquery.js"></script>
     <script src="../../public/lib/moment/moment.js"></script>
     <script src="../../public/lib/jquery-ui/jquery-ui.js"></script>
+
+    <script src="../../public/lib/datatables/jquery.dataTables.js"></script>
+    <script src="../../public/lib/datatables-responsive/dataTables.responsive.js"></script>
+
+
     <script src="../../public/lib/jquery-switchbutton/jquery.switchButton.js"></script>
     <script src="../../public/lib/peity/jquery.peity.js"></script>
 
     <script src="../../public/js/bracket.js"></script>
+    <script src="mntproducto.js"></script>
+
+  </body>
+</html>
   </body>
 </html>

@@ -1,9 +1,9 @@
 
     <?php
-        require_once(../config/conexion.php);
-        require_once(../config/Productos.php);
+        require_once("../config/conexion.php");
+        require_once("../model/Producto.php");
 
-        $producto = new Productos();
+        $producto = new Producto();
 
         switch($_GET["op"]){
             case "listar":
@@ -18,19 +18,13 @@
                     $data[] = $sub_array;
                 }
 
-                $results = array(
-                    "sEcho" => 1,
-                    "iTotalRecords" => count($data),
-                    "iTotalDisplayRecords" => count($data),
-                    "aaData" => $data
-                )
 
                 $results = array(
                     "sEcho" => 1,
                     "iTotalRecords" => count($data),
                     "iTotalDisplayRecords" => count($data),
                     "aaData" => $data
-                )
+                );
                 echo json_encode($results);
             break;
         }
