@@ -62,4 +62,15 @@ $(document).ready(function(){
 
 });
 
+document.getElementById("btnNuevo")
+
+$(document).on('click', '#btnNuevo', function(){
+    //alert("EVENTO DETECTADO EN EL BOTON NUEVO");
+    $('#modalmantenimiento').modal('show');
+})
+function eliminar(prod_id){
+    alert("ELIMINAR: " + prod_id);
+    $.post("../../controller/producto.php?op=eliminar", {prod_id:prod_id}, function(data){    
+    });
+}
 init();
