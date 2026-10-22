@@ -55,7 +55,7 @@ switch ($_GET["op"]) {
         break;
 
     case "eliminar":
-        $producto->delete_producto($_POST["prod_id"]);
+        $producto->delete_product($_POST["prod_id"]);
         break;
     }
 ?>
