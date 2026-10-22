@@ -98,9 +98,6 @@ function eliminar(prod_id){
         if (result.isConfirmed) {
 
             $.post("../../controller/producto.php?op=eliminar",{prod_id:prod_id},function (data) {
-
-            });
-
             $('#producto_data').DataTable().ajax.reload();	
 
             swal.fire(
@@ -108,6 +105,9 @@ function eliminar(prod_id){
                 'El registro se elimino correctamente.',
                 'success'
             )
+            });
+
+
         }
     })
 }
